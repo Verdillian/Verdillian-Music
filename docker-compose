@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  verdillian-frontend:
+    image: verdillian/verdillian-music:latest
+    container_name: verdillian-music
+    restart: unless-stopped
+    ports:
+      - "6969:3000"
+    environment:
+      - PORT=3000
+      - VITE_DEFAULT_SERVER_URL=Link-To-Navidrome
+      - VITE_DEFAULT_LIDARR_URL=Link-To-Lidarr
+      - VITE_DEFAULT_LIDARR_API_KEY=Lidarr-API-Key
+    volumes:
+      # Persists your SQLite database across container updates and reboots
+      - verdillian_data:/app/data
+
+volumes:
+  verdillian_data:
