@@ -6,4 +6,12 @@ Docker Compose: https://github.com/Verdillian/Verdillian-Music/blob/main/docker-
 
 All you need to do is run the docker compose included, you DO NOT need to include the env variables but it makes it more personalized if you do and ensures you don't need to enter the navidrome url everytime you sign in.
 
+Required Environment Variables:
+
+NAVIDROME_URL
+LIDARR_URL
+LIDARR_API_KEY
+SERVER_SECRET (32bit hex key)
+JWT_SECRET (32bit hex key)
+
 THIS IS JUST A CLIENT FOR NAVIDROME - YOU STILL NEED TO HAVE A WORKING NAVIDROME SETUP FOR THIS.
